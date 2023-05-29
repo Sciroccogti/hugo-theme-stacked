@@ -14,9 +14,9 @@
         {{ end }}
 
         {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
-        {{- $Theme := printf `<b><a href="https://github.com/cmpute/hugo-theme-stacked" target="_blank" rel="noopener" data-version="%s">Stacked</a></b>` $ThemeVersion -}}
+        {{- $Theme := printf `<b><a href="https://github.com/Sciroccogti/hugo-theme-stacked" target="_blank" rel="noopener" data-version="%s">Stacked</a></b>` $ThemeVersion -}}
         {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
-        {{- $ModifiedBy := `Jacob` -}}
+        {{- $ModifiedBy := `Jacob & <a href="https://github.com/Sciroccogti/" target="_blank">Sciroccogti</a>` -}}
 
         {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
         {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy "ModifiedBy" $ModifiedBy) | safeHTML }}
