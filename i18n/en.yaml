@@ -23,6 +23,18 @@ article:
     tableOfContents:
         other: Table of contents
 
+    backToTop:
+        other: Back to Top
+
+    comments:
+        other: Comments
+
+    sidebarClose:
+        other: Collapse
+
+    sidebarOpen:
+        other: Expand
+
     relatedContent:
         other: Related content
 
@@ -56,3 +68,10 @@ footer:
 
     designedBy:
         other: Theme {{ .Theme }} designed by {{ .DesignedBy }}, modified by {{ .ModifiedBy }}
+
+rss:
+    readMore:
+        other: "Go to {{ .PageLink }} to read full text."
+
+    linkTitle:
+        other: "webpage"
