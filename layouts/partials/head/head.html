@@ -5,8 +5,12 @@
 <meta name='description' {{ printf "content=%q" $description | safeHTMLAttr }}>
 {{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
 
-{{- $title := partial "data/title" . -}}
+{{- $title := partialCached "data/title" . .RelPermalink -}}
+{{ if .IsHome }}
 <title>{{ $title }}</title>
+{{ else }}
+<title>{{ $title }} | {{ .Site.Title }}</title>
+{{ end }}
 
 <link rel='canonical' href='{{ .Permalink }}'>
 
