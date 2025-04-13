@@ -52,7 +52,7 @@ search:
 
 footer:
     builtWith:
-        other: "مبني باستخدام {{ .Generator }}"
+        other: "مبني بستخدام {{ .Generator }}"
         
     designedBy:
         other:  "قالب {{ .Theme }} مصمم من {{ .DesignedBy }}"

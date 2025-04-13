@@ -53,14 +53,7 @@ class Search {
         this.resultTitle = resultTitle;
         this.resultTitleTemplate = resultTitleTemplate;
 
-        /// Check if there's already value in the search input
-        if (this.input.value.trim() !== '') {
-            this.doSearch(this.input.value.split(' '));
-        }
-        else {
-            this.handleQueryString();
-        }
-
+        this.handleQueryString();
         this.bindQueryStringChange();
         this.bindSearchForm();
     }

@@ -39,21 +39,6 @@ notFound:
     subtitle:
         other: Cette page n'existe pas.
 
-widget:
-    archives:
-        title:
-            other: Archives
-
-        more:
-            other: Autres
-
-    tagCloud:
-        title:
-            other: Mots clés
-    categoriesCloud:
-        title:
-            other: Catégories
-
 search:
     title:
         other: Rechercher
