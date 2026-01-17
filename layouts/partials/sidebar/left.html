@@ -63,10 +63,10 @@
             {{ $active := or (eq $currentPage.Title .Name) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
             {{ if .HasChildren }}
                 <li class="dropdown">
-                    <a class="dropdown-header">
+                    <button class="dropdown-header" type="button" aria-expanded="false">
                         {{ partial "helper/icon" "arrow-down" }}
                         <span>{{ .Name }}</span>
-                    </a>
+                    </button>
                     <ul class="dropdown-content">
                         {{ range .Children }}
                             <li class="dropdown-item {{ if eq $currentPage.RelPermalink .URL }} current {{ end }}">

@@ -227,7 +227,13 @@
     }
 
     .dropdown-header {
-        height: auto;
+        background: none;
+        padding: 0;
+        border: 0;
+        display: inline-flex;
+        align-items: center;
+        color: var(--body-text-color);
+        gap: var(--menu-icon-separation);
     }
 
     .dropdown-header svg {
@@ -235,20 +241,42 @@
     }
 
     .dropdown-content {
-        display: none;
-        // position: absolute;
-        width: 100%;
+        margin: 0;
         transition-duration: 0.15s;
         padding: 0;
+        list-style: none;
+
+        max-height: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        transform: translateY(-4px);
     }
 
-    .dropdown:hover {
-        .dropdown-header svg {
-            transform: rotate(180deg);
+    .dropdown-content>* {
+        overflow: hidden;
+    }
+
+    .dropdown.open .dropdown-content {
+        max-height: 600px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .dropdown.open .dropdown-header svg {
+        transform: rotate(180deg);
+    }
+
+    /* ===== 桌面端：仅在支持 hover 的设备上启用 hover 展开 ===== */
+    @media (hover: hover) and (pointer: fine) {
+        .dropdown:hover .dropdown-content {
+            max-height: 600px;
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .dropdown-content {
-            display: block;
+        .dropdown:hover .dropdown-header svg {
+            transform: rotate(180deg);
         }
     }
 

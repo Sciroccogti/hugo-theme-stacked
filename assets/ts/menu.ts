@@ -81,3 +81,21 @@ export default function () {
         });
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isTouchLike = () =>
+    window.matchMedia("(hover: none), (pointer: coarse)").matches;
+
+  document
+    .querySelectorAll<HTMLButtonElement>(".dropdown > .dropdown-header")
+    .forEach((header) => {
+      header.addEventListener("click", () => {
+        if (!isTouchLike()) return; // 桌面端不走点击展开
+
+        const dropdown = header.closest<HTMLElement>(".dropdown");
+        if (!dropdown) return;
+
+        dropdown.classList.toggle("open");
+      });
+    });
+});
